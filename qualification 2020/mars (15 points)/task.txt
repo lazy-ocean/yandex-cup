@@ -1,0 +1,3 @@
+Pixel-perfect repeat a picture of planets.
+For html and css you can use only less than 1024 symbols.
+Add your solution to output.html and open index.html to compare your picture and the original one.

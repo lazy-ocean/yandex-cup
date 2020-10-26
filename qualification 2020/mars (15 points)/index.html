@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Shortener</title>
+  </head>
+  <body
+    style="
+      margin: 0;
+      background-color: #333;
+      display: flex;
+      min-height: 100vh;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    "
+  >
+    <div style="width: 512px; height: 512px; position: relative">
+      <img
+        src="./input.png"
+        alt=""
+        style="
+          position: absolute;
+          left: 0;
+          z-index: -1;
+          width: 512px;
+          height: 512px;
+        "
+      />
+      <iframe
+        src="output.html"
+        frameborder="0"
+        style="width: 100%; height: 100%; opacity: 0.5"
+      ></iframe>
+      <div class="m">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+      </div>
+      <div class="sp"></div>
+    </div>
+    <input
+      type="range"
+      min="0"
+      max="1"
+      step="0.01"
+      value="0.5"
+      style="width: 512px; margin-top: 10px"
+      oninput="changeOpacity(this.value)"
+      onchange="changeOpacity(this.value)"
+    />
+
+    <script>
+      const iframe = document.querySelector("iframe");
+      function changeOpacity(newOpacity) {
+        iframe.style.opacity = newOpacity;
+      }
+    </script>
+  </body>
+</html>
